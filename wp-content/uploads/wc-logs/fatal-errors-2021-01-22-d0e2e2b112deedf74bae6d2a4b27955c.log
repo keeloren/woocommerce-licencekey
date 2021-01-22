@@ -1,0 +1,14 @@
+2021-01-22T09:25:22+00:00 CRITICAL syntax error, unexpected '$links' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) in /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php on line 431
+
+2021-01-22T10:08:23+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Abstract_Legacy_Order::get_product_from_item(), 0 passed in /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php on line 340 and exactly 1 expected in /var/www/html/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php:319
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php(340): WC_Abstract_Legacy_Order->get_product_from_item()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php(415): WC_REST_Orders_V2_Controller->get_formatted_item_data(Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-crud-controller.php(143): WC_REST_Orders_V2_Controller->prepare_object_for_response(Object(Automattic\WooCommer in /var/www/html/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php on line 319
+
+2021-01-22T10:08:40+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function WC_Abstract_Order::get_item(), 0 passed in /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php on line 340 and at least 1 expected in /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php:881
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php(340): WC_Abstract_Order->get_item()
+#1 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php(415): WC_REST_Orders_V2_Controller->get_formatted_item_data(Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-crud-controller.php(143): WC_REST_Orders_V2_Controller->prepare_object_for_response(Object(Automattic\WooCommerce\Admin\Overrides\Order), Object(WP_REST_R in /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php on line 881
+
