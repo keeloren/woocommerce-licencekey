@@ -253,6 +253,7 @@ class Order
      */
     public function showBoughtLicenses($order)
     {
+        
         // Return if the order isn't complete.
         if ($order->get_status() != 'completed'
             && !get_post_meta($order->get_id(), 'lmfwc_order_complete')
@@ -261,7 +262,7 @@ class Order
         }
 
         $data = apply_filters('lmfwc_get_customer_license_keys', $order);
-
+        
         // No license keys found, nothing to do.
         if (!$data) {
             return;

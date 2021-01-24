@@ -19,6 +19,7 @@ defined('ABSPATH') || exit; ?>
 
 <h2><?php esc_html_e($heading); ?></h2>
 
+
 <?php foreach ($data as $productId => $row): ?>
     <table class="shop_table">
         <tbody>

@@ -383,6 +383,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 			'fee_lines',
 			'coupon_lines',
 			'refunds',
+            'licence_key'
 		);
 
         // Add licence attribute
@@ -390,10 +391,19 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
         // Add licence attribute
         // Add licence attribute
         // Add licence attribute
-        $data['licence_key'] = $order->get_status();
-
+        
         if ( $order->has_status('completed') ) {
-            $allowed_fields['licence_key'];
+    
+            $licenceKey = '';
+    
+            $licences = apply_filters('lmfwc_get_customer_license_keys', $order);
+            foreach ($licences as $value) {
+                foreach ($value['keys'] as $license) {
+                    $licenceKey = $license->getDecryptedLicenseKey();
+                }
+            }
+    
+            $data['licence_key'] = $licenceKey;
         }
 
 		$data = array_intersect_key( $data, array_flip( $allowed_fields ) );

@@ -1,0 +1,7 @@
+2021-01-24T17:03:23+00:00 CRITICAL Uncaught Error: Call to a member function getDecryptedLicenseKey() on array in C:\xampp\htdocs\woocommerce-licencekey\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version2\class-wc-rest-orders-v2-controller.php:397
+Stack trace:
+#0 C:\xampp\htdocs\woocommerce-licencekey\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version2\class-wc-rest-orders-v2-controller.php(426): WC_REST_Orders_V2_Controller->get_formatted_item_data(Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#1 C:\xampp\htdocs\woocommerce-licencekey\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version3\class-wc-rest-crud-controller.php(143): WC_REST_Orders_V2_Controller->prepare_object_for_response(Object(Automattic\WooCommerce\Admin\Overrides\Order), Object(WP_REST_Request))
+#2 C:\xampp\htdocs\woocommerce-licencekey\wp-includes\rest-api\class-wp-rest-server.php(1160): WC_REST_CRUD_Controller->get_item(Object(WP_REST_Request))
+#3 C:\xampp\htdocs\woocommerce-licencekey\wp-includes\rest-api\class-wp- in C:\xampp\htdocs\woocommerce-licencekey\wp-content\plugins\woocommerce\includes\rest-api\Controllers\Version2\class-wc-rest-orders-v2-controller.php on line 397
+
