@@ -136,7 +136,6 @@ abstract class ResourceRepository extends Singleton implements RepositoryInterfa
         $sqlQuery .= ';';
 
         $result = $wpdb->get_row($sqlQuery);
-
         if (!$result) {
             return false;
         }
