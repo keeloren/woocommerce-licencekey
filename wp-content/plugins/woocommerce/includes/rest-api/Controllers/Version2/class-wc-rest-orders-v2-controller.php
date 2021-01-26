@@ -390,12 +390,15 @@ class WC_REST_Orders_V2_Controller extends WC_REST_CRUD_Controller {
 
         if ( $order->has_status('completed') ) {
 
-            $licenceKey = '';
+            $licenceKey = [];
     
             $licences = apply_filters('lmfwc_get_customer_license_keys', $order);
 
             foreach ($licences as $value) {
-                $licenceKey = $value['keys'][0]->getDecryptedLicenseKey();
+
+                foreach ($value['keys'] as $license) {
+                    $licenceKey[] = $license->getDecryptedLicenseKey();
+                }
             }
 
             $data['licence_key'] = $licenceKey;
