@@ -54,6 +54,7 @@ define( 'AUTH_SALT',        '251975bca069cc798bb33dc216b11f537b9ae7e0');
 define( 'SECURE_AUTH_SALT', '535aaeaa8a306f573b64ce984404696526edaebf');
 define( 'LOGGED_IN_SALT',   '590455a95631d0e4c6ed80a4f2a7216de9c6a0d4');
 define( 'NONCE_SALT',       '8539dfba1d9e4b08743b433f5f70284722553e16');
+define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
 
 /**#@-*/
 
